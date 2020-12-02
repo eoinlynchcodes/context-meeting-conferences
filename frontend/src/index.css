@@ -1,13 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+html {
+  font-size: 16px; /* 16px * 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
 body {
+  font: 1.6em ;
+  font-family: 'Lato';
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, h1, h2, h3, h4, h5, p{
+  font-family: 'Lato';
+  color: #17262e;
+}
+
+h1{
+  font-size: 3em;
+}
+
+h2{
+  font-size: 2.5em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+h4{
+  font-size: 1.5em;
+}
+
+h5{
+  font-size: 1.2em;
+}
+
+p, ul, li, i{
+  font-size: 1em;
+}
+
+button {
+  font-size: 1.6em;
+}
+.full-width {
+  width: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 4em 4em;
+  background-color: white;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  background-color: #17262e;
+  align-items: center;
+}
+
+.greenText{
+  color: #0f9961;
+
+}
+
+.redButton{
+  background-color: red;
+  color: white;
+  padding: 1em 1em;
+  border-radius: 24px;
+  justify-self: flex-end;
+}
+
+.sectionOne{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40em;
+  background-color: white;
+}
+
+.mainHeading{
+  background-color: white;
+  height: auto;
+}
+
+.sectionTwo{
+  border: 3em solid #17262e;
+  background-color: #0f9961;
+  color: white;
+  padding: 2em 4em;
+  margin: 0 auto;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.insideSectionTwo{
+  background-color: white;
+  color: #17262e;
+  padding: 1em;
+  border-radius: 24px;
+}
+
+.textAndForm{
+  background-color: white;
+  border-radius: 12px;
+}
+
+.primary{
+  border: 15px solid #0f9961;
+  padding: 1em 2em;
+  width: 60%;
+  margin: 1em;
+  border-radius: 24px;
+  background-color: white;
+}
+.primary p {
+  text-align: left
+}
+
+.whiteText{
+  color: white;
+}
+
+.image img{
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDataCollection{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 2px solid grey;
+  padding: 1em 2em;
+}
+.forHeight{
+  height: 25em;
+  margin: 5em auto;
+}
+
+.primaryBenefits{
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  background-color: #17262e;
+}
+
+.getEarlyAccess{
+  background-color: #0f9961;
+  padding: 0em 0em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 auto;
+  font-size: 1.25em;
+}
+
+.imageContainer img{
+  border-radius: 24px;
+}
+
+.hr{
+  width: 20%;
+  margin: 0 auto;
+}
+
+.made{
+  border: 1px solid black;
+  padding: 1em;
+}
+
+.in{
+  background-color: white;
+  padding: 1em;
+}
+
+.ireland{
+  background-color: orange;
+  padding: 1em;
+}
+
+.eoinlynch{
+  background-color: white;
+  color: black;
+  padding: 0em 1em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.eoinlynch a{
+  color: black;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: #333333;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f9961;
+  color: #17262e;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0em 0em;
+  }
+
+  .sectionOne{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imageContainer img{
+    max-width: 100%;
+    margin: 2em auto;
+    border-radius: 0px;
+  }
+
+  .sectionTwo{
+    border: 1em solid #17262e;
+    padding: 1em 1em;
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+  .primaryBenefits{
+    flex-direction: column;
+  }
+
+  .forHeight{
+    height: auto;
+  }
+
+  .whiteText{
+    font-size: 1.5em;
+    text-align: center;
+  }
 }
