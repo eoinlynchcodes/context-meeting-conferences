@@ -167,6 +167,11 @@ nav{
   font-size: 1.25em;
 }
 
+.getEarlyAccess:hover{
+  background-color: #17262e;
+  color: #0f9961;
+}
+
 .imageContainer img{
   border-radius: 24px;
 }
