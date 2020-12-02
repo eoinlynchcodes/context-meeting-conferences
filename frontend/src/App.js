@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import aine from "./images/aine.png";
+
 function App() {
+  
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -16,7 +18,7 @@ function App() {
 
   const handleSubmit = (event) => {
     axios
-      .post("/", user)
+      .post(`${process.env.DATABASE_URL}/api/users/`, user)
       .then((response) => {
         setUser(response.data);
         window.location.reload();
