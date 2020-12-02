@@ -168,7 +168,8 @@ nav{
 }
 
 .getEarlyAccess:hover{
-  background-color: #17262e;
+  background-color: white;
+  border: 1px solid black;
   color: #0f9961;
 }
 
