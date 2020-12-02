@@ -77,8 +77,8 @@ function App() {
               <u>Context</u> - Video Software for meetings.
             </h3>
               <ul>
-                <li>See your agenda, decisions to be made, topics to discuss on screen throughout your video call.</li>
-                <li>Meeting results, decisions and outcomes are saved for reference later and to give people that weren't in the meeting context.</li>
+                <li>See your agenda, decisions to be made, topics to discuss on screen throughout your video call.</li><br/>
+                <li>Meeting results, decisions and outcomes are saved for reference later and to give people that weren't in the meeting context.</li><br/>
               <li>Make better decisions, faster using <i>Context video call software. </i></li><br/>
               <li>Keep meetings on topic executing what is required and achieving the outcomes hoped for.</li><br/>
               <li>Schedule, run and get insights into meetings using our clever
