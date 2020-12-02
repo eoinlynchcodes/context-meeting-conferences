@@ -18,8 +18,6 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    debugger
-    console.log(user);
     axios
       .post(`postgres://ispxojanviaomr:8937dd5d5bb239d80bb96aab698d1f220e66f9980b8658cc14d031c243e401f1@ec2-54-75-248-49.eu-west-1.compute.amazonaws.com:5432/ddal8aprmvbv22/api/users/`, user)
       .then((response) => {
