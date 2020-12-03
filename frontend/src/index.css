@@ -156,7 +156,7 @@ nav{
 }
 
 .getEarlyAccess{
-  background-color: #0f9961;
+  background-color: red;
   padding: 0em 0em;
   width: 100%;
   display: flex;
@@ -166,10 +166,12 @@ nav{
   margin: 0 auto;
   font-size: 1.25em;
 }
+.getEarlyAccess p{
+  color: white;
+}
 
 .getEarlyAccess:hover{
-  background-color: white;
-  border: 1px solid black;
+  background-color: #0f9961;
   color: #0f9961;
 }
 
