@@ -16,8 +16,7 @@ function App() {
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = () => {
     axios.post(`${process.env.DATABASE_URL}/api/users/`, user)
     .then(response => {
       setUser(response.data);
