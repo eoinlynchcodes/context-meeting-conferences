@@ -4,6 +4,7 @@ import aine from "./images/aine.png";
 
 function App() {
   
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -16,8 +17,11 @@ function App() {
     });
   };
 
-  const handleSubmit = () => {
-    axios.post(`${process.env.DATABASE_URL}/api/users/`, user)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    debugger
+    console.log(`${process.env.REACT_APP_DATABASE_URL}`);
+    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/`, user)
     .then(response => {
       setUser(response.data);
       window.location.reload();
