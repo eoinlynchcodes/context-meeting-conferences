@@ -19,9 +19,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    debugger
-    console.log(`${process.env.REACT_APP_DATABASE_URL}`);
-    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/`, user)
+        axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/`, user)
     .then(response => {
       setUser(response.data);
       window.location.reload();
@@ -61,7 +59,7 @@ function App() {
             <label>Email:</label>
             <input name="email" onChange={(event) => handleChange(event)} />
             <br />
-            <div onClick={handleSubmit} className="getEarlyAccess">
+            <div onClick={(event) => handleSubmit(event)} className="getEarlyAccess">
               <p>
                 <b>Get early access</b>
               </p>
