@@ -142,7 +142,9 @@ nav{
   border-radius: 24px;
   border: 2px solid grey;
   padding: 1em 2em;
+  cursor: pointer;
 }
+
 .forHeight{
   height: 25em;
   margin: 5em auto;
