@@ -19,7 +19,7 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-        axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/users/`, user)
+        axios.post(`${process.env.REACT_APP_DATABASE_URL}api/users/`, user)
     .then(response => {
       setUser(response.data);
       window.location.reload();
