@@ -18,8 +18,8 @@ function FutureMeetings() {
 
   return (
     <div>
+      <div className="">
       <h2>Future Meetings:</h2>
-      <div>
         {meetingData.map(( item, key ) => {
           return (
             <div>

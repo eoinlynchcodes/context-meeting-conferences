@@ -7,16 +7,16 @@ import SideNavigation from "../components/SideNavigation";
 function Dashboard() {
   return (
     <div className="schedule-meeting-div">
-      <section>
+      <section className="side-navigation-section">
         <SideNavigation />
       </section>
       <div>
         <div className="dashboard-section-one">
-          <section>
+          <section className="scheduler-section">
             <Scheduler />
           </section>
 
-          <section>
+          <section className="future-meetings">
             <FutureMeetings />
           </section>
         </div>

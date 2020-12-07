@@ -257,17 +257,35 @@ footer{
 
 /* /dashboard route */
 .schedule-meeting-div{
-  display: flex;
+display: flex;
+flex-direction: row;
 }
 
-.dashboard-section-one{
+.future-meetings{
   display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 2em auto;
+  border: 2px solid #333333;
+  padding: .5em 2em;
+  border-radius: 12px;
 }
 
 /* /dashboard route && SideNavigation Component */
+
+.dashboard-section-one{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.side-navigation-section{
+  background-color: #0f9961;
+  width: 12%;
+}
+
 .side-nav{
   height: 100%;
-  background-color: #0f9961;
   color: white;
 }
 
@@ -280,7 +298,10 @@ footer{
   display: flex;
   flex-direction: column;
   width: 60%;
-  margin: 0 auto;
+  margin: 2em auto;
+  border: 2px solid #333333;
+  padding: .5em 2em;
+  border-radius: 12px;
 }
 
 /* MEDIA QUERIES FROM HERE DOWN */

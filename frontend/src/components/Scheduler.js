@@ -35,8 +35,7 @@ function Scheduler() {
   return (
     <div>
       <form onSubmit={sendMeetingData} className="schedule-form">
-        <h2>Schedule your next meeting:</h2>
-
+        <h2>Next meeting:</h2>        
         <label>Date:</label>
           {/* <DatePicker name="date" placeholder="Date" /> */}
           <input 
