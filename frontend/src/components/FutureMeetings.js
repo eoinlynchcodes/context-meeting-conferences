@@ -7,7 +7,7 @@ function FutureMeetings() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/meetings/")
+      .get(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/`)
       .then(response => {
         setMeetingData(response.data);
       })
@@ -22,7 +22,7 @@ function FutureMeetings() {
       <h2>Future Meetings:</h2>
         {meetingData.map(( item, key ) => {
           return (
-            <div>
+            <div className="individual-meeting">
               <h2>{item.meetingTitle}</h2>
               <p><u><b>Agenda:</b></u> {item.agenda}</p>
               <p><u><b>Context:</b></u> {item.context}</p>
@@ -39,9 +39,7 @@ function FutureMeetings() {
                     item: item
                   }
                 }}>
-                <div className="goToMeetingButton">
-                  <h5>Go To Meeting</h5>
-                </div>
+                <h5 className="goToMeetingText" >Go To Meeting</h5>
               </Link>
             </div>
           );

@@ -1,8 +1,8 @@
 import React from "react";
-import Navigation from "../components/SideNavigation";
 import Videobox from "../components/Videobox";
 import Tracker from "../components/Tracker";
 import { useLocation } from 'react-router-dom';
+import SideNavigation from "../components/SideNavigation";
 
 function OngoingMeeting(){
 
@@ -12,16 +12,16 @@ function OngoingMeeting(){
 
     return (
       
-      <div className="ongoingmeeting">
-        <section className="navigation">
-          <Navigation />
-        </section>
+      <div className="ongoingmeeting-div">
+       <section className="side-navigation-section">
+        <SideNavigation />
+      </section>
 
         <section className="videobox">
           <Videobox />
         </section>
 
-        <section className="meetingTracker">
+        <section className="meeting-tracker-section">
           <Tracker currentMeetingData={currentMeetingData}  />
         </section>
       </div>

@@ -22,7 +22,7 @@ function Scheduler() {
   
   const sendMeetingData = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:5000/api/meetings/newmeeting', meeting)
+    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/newmeeting`, meeting)
       .then((response) => {
         console.log(response);
         window.location.reload();
@@ -34,7 +34,7 @@ function Scheduler() {
 
   return (
     <div>
-      <form onSubmit={sendMeetingData} className="schedule-form">
+      <form  onSubmit={sendMeetingData} className="schedule-form">
         <h2>Next meeting:</h2>        
         <label>Date:</label>
           {/* <DatePicker name="date" placeholder="Date" /> */}
