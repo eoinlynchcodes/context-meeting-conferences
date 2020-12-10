@@ -1,15 +1,14 @@
 import React from "react";
 import "./index.css";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import OngoingMeeting from "./screens/OngoingMeeting";
 import Dashboard from "./screens/Dashboard";
 import LandingPage from './screens/LandingPage';
 import Signup from './screens/Signup';
-import LoginScreen from './screens/Login';
+import Login from './screens/Login';
 
 
 function App() {
-
 
   return (
     <BrowserRouter>
@@ -22,7 +21,7 @@ function App() {
           <nav className="navfromsite">
             <h3>Context</h3>
           </nav>
-          <LoginScreen/>
+          <Login/>
         </Route>
 
         <Route exact path="/signup">

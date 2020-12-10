@@ -20,7 +20,7 @@ function Login(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:5000/auth/users/login', loginData)
+        axios.post(`${process.env.REACT_APP_DATABASE_URL}/auth/users/login`, loginData)
         .then(response => {
             setLoginData(response.data);
             history.push('/dashboard');

@@ -24,7 +24,9 @@ function Signup() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      axios.post(`${process.env.REACT_BACKEND_URL}/auth/users/register`, individual)
+      debugger
+      console.log(`${process.env.REACT_APP_DATABASE_URL}`);
+      axios.post(`${process.env.REACT_APP_DATABASE_URL}/auth/users/register`, individual)
       .then(response => {
         setIndividual(response.data);
         history.push('/login');  

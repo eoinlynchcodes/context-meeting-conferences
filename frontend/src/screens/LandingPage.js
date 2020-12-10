@@ -19,7 +19,7 @@ function LandingPage() {
   
     const handleSubmit = (event) => {
       event.preventDefault();
-          axios.post(`${process.env.REACT_APP_DATABASE_URL}api/users/`, user)
+      axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/prospects`, user)
       .then(response => {
         setUser(response.data);
         window.location.reload();
@@ -33,7 +33,9 @@ function LandingPage() {
       <div className="">
         <nav>
           <h3 className="greenText">Context - Meeting Software</h3>
-          <div className="signUpButton"><Link to="/signup"><h3>Sign Up</h3></Link></div>
+          <div><Link to="/signup"><p className="signup-text">Sign Up</p></Link></div>
+          <div><Link to="/login"><p className="login-text">Log In</p></Link></div>
+
         </nav>
   
         <section className="sectionOne">
