@@ -298,6 +298,8 @@ flex-direction: row;
 .side-navigation-section{
   background-color: #0f9961;
   width: 12%;
+  display: flex;
+  justify-content: center;
 }
 
 .side-nav{
