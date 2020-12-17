@@ -29,9 +29,6 @@ function FutureMeetings() {
               <p><u><b>To decide:</b></u> {item.decisionsToMake} </p>
               <p><u><b>Who is needed:</b></u> {item.whoIsNeeded} </p>
               <p><u><b>Date:</b></u> {item.date} </p>
-
-
-              {console.log(item)}
               <Link className="goToMeetingText"
                 to={{
                   pathname: "/ongoingmeeting",

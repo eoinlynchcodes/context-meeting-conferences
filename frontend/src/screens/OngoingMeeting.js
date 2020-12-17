@@ -7,7 +7,6 @@ import SideNavigation from "../components/SideNavigation";
 function OngoingMeeting(){
 
   const location = useLocation();
-  console.log(location.state.item);
   const currentMeetingData = location.state.item;
 
     return (

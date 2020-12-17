@@ -280,8 +280,8 @@ flex-direction: row;
 .future-meetings{
   display: flex;
   flex-direction: column;
-  width: 60%;
-  margin: 2em auto;
+  width: 50%;
+  margin: 2em 2em;
   border: 2px solid #333333;
   padding: .5em 2em;
   border-radius: 12px;
@@ -322,6 +322,10 @@ flex-direction: row;
   border-radius: 12px;
 }
 
+.scheduler-section{
+  width: 50%;
+}
+
 
 /* /dashboard route && Future Meetings Component */
 
@@ -348,7 +352,7 @@ flex-direction: row;
 }
 
 .side-navigation-section{
-  width: 10%;
+  width: 12%;
 }
 
 .videobox{

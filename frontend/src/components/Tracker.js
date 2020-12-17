@@ -14,6 +14,7 @@ function Tracker(props) {
     decisionsToMake: currentMeetingData.decisionsToMake,
     whoIsNeeded: currentMeetingData.whoIsNeeded,
     meetingTitle: currentMeetingData.meetingTitle,
+    originalMeetingID: currentMeetingData.id,
     decisionResults: "",
     nextSteps: "",
     notes: "",
@@ -28,11 +29,12 @@ function Tracker(props) {
 
   const endMeeting = (event) => {
     event.preventDefault();
-    axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/meetings/savemeeting`,
-        fromMeeting
-      )
-      .then((response) => {
+    debugger
+    console.log(currentMeetingData);
+    console.log(process.env.REACT_APP_DATABASE_URL);
+    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/savemeeting`, fromMeeting)
+      .then(response => {
+        console.log(response);
         history.push("/dashboard");
       })
       .catch((error) => {
@@ -101,7 +103,7 @@ function Tracker(props) {
           onChange={(event) => changeHandler(event)}
         />
         <br />
-        <div onClick={endMeeting} type="submit"><h5 className="save-meeting-button">Save Meeting</h5></div>
+        <button onClick={endMeeting} type="submit"><h5 className="save-meeting-button">Save Meeting</h5></button>
       </form>
     </div>
   );
