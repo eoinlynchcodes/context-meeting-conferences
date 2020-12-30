@@ -103,6 +103,7 @@ function Scheduler() {
             <option value="Decision Maker">Decision Maker</option>
             <option value="Relay Information">Relay Information</option>
             <option value="Brainstorm">Brainstorm</option>
+            <option value="Feedback">Feedback</option>
             <option value="Social">Social</option>
           </select>
         <br />
