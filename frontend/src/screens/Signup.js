@@ -7,12 +7,12 @@ function Signup() {
     const history = useHistory();
 
     const [individual, setIndividual] = useState({
-        firstName: "",
-        lastName: "",
+        firstname: "",
+        lastname: "",
         username: "",
         password: "",
-        emailAddress: "",
-        companyName: "",
+        emailaddress: "",
+        companyname: "",
     });
 
     const handleChange = (event) => {
@@ -24,8 +24,6 @@ function Signup() {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      debugger
-      console.log(`${process.env.REACT_APP_DATABASE_URL}`);
       axios.post(`${process.env.REACT_APP_DATABASE_URL}/auth/users/register`, individual)
       .then(response => {
         setIndividual(response.data);
@@ -43,7 +41,7 @@ function Signup() {
 
         <label>Company Name:</label>
         <input
-          name="companyName"
+          name="companyname"
           onChange={(event) => handleChange(event)}
           placeholder="Company Name:"
         />
@@ -51,7 +49,7 @@ function Signup() {
 
         <label>Email:</label>
         <input
-          name="emailAddress"
+          name="emailaddress"
           onChange={(event) => handleChange(event)}
           placeholder="Email:"
         />
@@ -67,7 +65,7 @@ function Signup() {
 
         <label>First Name:</label>
         <input
-          name="firstName"
+          name="firstname"
           onChange={(event) => handleChange(event)}
           placeholder="First Name:"
         />
@@ -75,7 +73,7 @@ function Signup() {
 
         <label>Last Name:</label>
         <input
-          name="lastName"
+          name="lastname"
           onChange={(event) => handleChange(event)}
           placeholder="Last Name:"
         />

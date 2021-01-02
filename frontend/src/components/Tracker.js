@@ -11,12 +11,12 @@ function Tracker(props) {
     agenda: currentMeetingData.agenda,
     context: currentMeetingData.context,
     date: Date.now(),
-    decisionsToMake: currentMeetingData.decisionsToMake,
-    whoIsNeeded: currentMeetingData.whoIsNeeded,
-    meetingTitle: currentMeetingData.meetingTitle,
-    originalMeetingID: currentMeetingData.id,
-    decisionResults: "",
-    nextSteps: "",
+    decisionstomake: currentMeetingData.decisionstomake,
+    whoIsneeded: currentMeetingData.whoisneeded,
+    meetingtitle: currentMeetingData.meetingtitle,
+    originalmeetingid: currentMeetingData.id,
+    decisionresults: "",
+    nextsteps: "",
     notes: "",
   });
 
@@ -30,9 +30,9 @@ function Tracker(props) {
   const endMeeting = (event) => {
     event.preventDefault();
     debugger
-    console.log(currentMeetingData);
-    console.log(process.env.REACT_APP_DATABASE_URL);
-    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/savemeeting`, fromMeeting)
+    console.log(fromMeeting);
+    console.log(`${process.env.REACT_APP_DATABASE_URL}`);
+    axios.post(`${process.env.REACT_APP_DATABASE_URL}/api/meetings/meetingreport`, fromMeeting)
       .then(response => {
         console.log(response);
         history.push("/dashboard");
@@ -44,12 +44,12 @@ function Tracker(props) {
 
   return (
     <div className="meeting-tracker-component">
-      <h3 className="whiteText">{currentMeetingData.meetingTitle}</h3>
+      <h3 className="whiteText">{currentMeetingData.meetingtitle}</h3>
       <p className="whiteText">
         <u>
           <b>Who is needed:</b>
         </u>{" "}
-        {currentMeetingData.whoIsNeeded}
+        {currentMeetingData.whoisneeded}
       </p>
       <p className="whiteText">
         <u>
@@ -67,7 +67,7 @@ function Tracker(props) {
         <u>
           <b>To Decide:</b>
         </u>{" "}
-        {currentMeetingData.decisionsToMake}
+        {currentMeetingData.decisionstomake}
       </p>
       <br />
 
@@ -75,7 +75,7 @@ function Tracker(props) {
         <label className="whiteText">Decisions Made:</label>
         <br />
         <textarea
-          name="decisionResults"
+          name="decisionresults"
           rows="8"
           placeholder="Results of decisions go here:"
           onChange={(event) => changeHandler(event)}
@@ -97,13 +97,15 @@ function Tracker(props) {
         <label className="whiteText">Next Steps:</label>
         <br />
         <textarea
-          name="nextSteps"
+          name="nextsteps"
           rows="8"
           placeholder="What should be done next?"
           onChange={(event) => changeHandler(event)}
         />
         <br />
-        <button onClick={endMeeting} type="submit"><h5 className="save-meeting-button">Save Meeting</h5></button>
+        <button onClick={endMeeting} type="submit">
+          <h5 className="save-meeting-button">Save Meeting</h5>
+        </button>
       </form>
     </div>
   );

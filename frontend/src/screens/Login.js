@@ -7,7 +7,7 @@ function Login(){
     const history = useHistory();
 
     const [ loginData, setLoginData ] = useState({
-        emailAddress: "",
+        emailaddress: "",
         password: ""
     });
 
@@ -36,14 +36,14 @@ function Login(){
             <h2>Log In</h2>
                 <label>Company Code:</label>
                     <input 
-                    name="companyCode"
+                    name="companycode"
                     type="text"
                     onChange={(event) => handleChange(event)}
                     />
                 <br/>
                 <label>Email Address:</label>
                     <input 
-                    name="emailAddress"
+                    name="emailaddress"
                     type="text"
                     onChange={(event) => handleChange(event)}
                     />

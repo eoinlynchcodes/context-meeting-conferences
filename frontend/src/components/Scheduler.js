@@ -8,12 +8,12 @@ function Scheduler() {
     date: "",
     agenda: "",
     context: "",
-    whoIsNeeded: "",
-    meetingTitle: "",
-    startTime: "",
-    endTime: "",
-    meetingType: "",
-    decisionsToMake: "",
+    whoisneeded: "",
+    meetingtitle: "",
+    starttime: "",
+    endtime: "",
+    meetingtype: "",
+    decisionstomake: "",
   });
 
   const changeHandler = (event) => {
@@ -68,7 +68,7 @@ function Scheduler() {
 
         <label>Start Time:</label>
           <input
-            name="startTime"
+            name="starttime"
             placeholder="Start Time:"
             onChange={(event) => changeHandler(event)}
           />
@@ -76,7 +76,7 @@ function Scheduler() {
 
         <label>End Time:</label>
           <input
-            name="endTime"
+            name="endtime"
             placeholder="End Time:"
             onChange={(event) => changeHandler(event)}
           />
@@ -84,7 +84,7 @@ function Scheduler() {
 
         <label>Meeting Title:</label>
           <input
-            name="meetingTitle"
+            name="meetingtitle"
             placeholder="Meeting title"
             onChange={(event) => changeHandler(event)}
           />
@@ -92,26 +92,26 @@ function Scheduler() {
 
         <label>Who is Needed?</label>
           <input
-            name="whoIsNeeded"
+            name="whoisneeded"
             placeholder="Who is needed?"
             onChange={(event) => changeHandler(event)}
           />
         <br />
 
         <label>Meeting Type:</label>
-          <select name="meetingType" onChange={(event) => changeHandler(event)}>
-            <option value="Decision Maker">Decision Maker</option>
-            <option value="Relay Information">Relay Information</option>
-            <option value="Brainstorm">Brainstorm</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Social">Social</option>
+          <select name="meetingtype" onChange={(event) => changeHandler(event)}>
+            <option value="decisionmaker">Decision Maker</option>
+            <option value="relayinformation">Relay Information</option>
+            <option value="brainstorm">Brainstorm</option>
+            <option value="feedback">Feedback</option>
+            <option value="social">Social</option>
           </select>
         <br />
 
-        <label>Decisions to make:</label>
+        <label>Decisions/Questions:</label>
           <textarea
             rows="6"
-            name="decisionsToMake"
+            name="decisionstomake"
             onChange={(event) => changeHandler(event)}
           />
         <br />
