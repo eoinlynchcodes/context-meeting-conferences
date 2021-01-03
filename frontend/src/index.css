@@ -346,6 +346,17 @@ flex-direction: row;
   width: 50%;
 }
 
+.report-container{
+}
+
+.report{
+  cursor: pointer;
+  border: 2px solid green;
+  padding: 2rem 2rem;
+  margin: 2rem auto;
+  width: 80%;
+}
+
 /* /ongoingmeeting route and Component */
 .ongoingmeeting-div{
   display: flex;
