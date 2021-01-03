@@ -389,6 +389,11 @@ textarea{
   border-radius: 12px;
 }
 
+.video-box{
+  width: 100%;
+  height: auto;
+}
+
 .save-meeting-button{
   background-color: white;
   color: black;
