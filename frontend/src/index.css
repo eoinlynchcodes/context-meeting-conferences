@@ -49,6 +49,10 @@ button {
   height: 100%;
 }
 
+.linebreaks{
+  white-space: pre-line;
+}
+
 .container{
   width: 80%;
   margin: 0 auto;
@@ -311,11 +315,12 @@ flex-direction: row;
   text-decoration: none;
 }
 
+
 /* /dashboard route && Scheduler Component */
 .schedule-form{
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 70%;
   margin: 2em auto;
   border: 2px solid #333333;
   padding: .5em 2em;
@@ -400,8 +405,13 @@ textarea{
   display: flex;
   justify-content: center;
   padding: 1em 1em;
-  border: 2px solid red;
   cursor: pointer;
+}
+
+.save-meeting-button{
+  display: flex;
+  background-color: #0f9961;
+  color: white;
 }
 
 

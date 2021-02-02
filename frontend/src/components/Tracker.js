@@ -43,31 +43,19 @@ function Tracker(props) {
   };
 
   return (
-    <div className="meeting-tracker-component">
+    <div className="meeting-tracker-component linebreaks">
       <h3 className="whiteText">{currentMeetingData.meetingtitle}</h3>
       <p className="whiteText">
-        <u>
-          <b>Who is needed:</b>
-        </u>{" "}
-        {currentMeetingData.whoisneeded}
+        {currentMeetingData.whoisneeded ? <u><b>Who is needed:</b></u> : null }
+      </p>
+      {/* <p className="whiteText">
+        {currentMeetingData.context ? (<u><b>Context:</b></u> {currentMeetingData.context} ) : null}
+      </p> */}
+      <p className="whiteText">
+        {currentMeetingData.agenda ? <u><b>Agenda:</b></u> : null}
       </p>
       <p className="whiteText">
-        <u>
-          <b>Context:</b>
-        </u>{" "}
-        {currentMeetingData.context}
-      </p>
-      <p className="whiteText">
-        <u>
-          <b>Agenda:</b>
-        </u>{" "}
-        {currentMeetingData.agenda}
-      </p>
-      <p className="whiteText">
-        <u>
-          <b>To Decide:</b>
-        </u>{" "}
-        {currentMeetingData.decisionstomake}
+        {currentMeetingData.decisionstomake ?  <p className="whiteText"><u><b>To Decide:</b></u><br/> {currentMeetingData.decisionstomake}</p> : null}
       </p>
       <br />
 
@@ -103,9 +91,7 @@ function Tracker(props) {
           onChange={(event) => changeHandler(event)}
         />
         <br />
-        <button onClick={endMeeting} type="submit">
-          <h5 className="save-meeting-button">Save Meeting</h5>
-        </button>
+          <h5 onClick={endMeeting} type="submit" className="save-meeting-button">Save Meeting</h5>
       </form>
     </div>
   );

@@ -26,9 +26,10 @@ export default function App() {
    */
   const createCall = useCallback(() => {
     setAppState(STATE_CREATING);
+    const roomDotRoom = 'http://localhost:3000/ongoingmeeting'
     return api
       .createRoom()
-      .then((room) => room.url)
+      .then((room) => roomDotRoom)
       .catch((error) => {
         console.log('Error creating room', error);
         setRoomUrl(null);
@@ -47,10 +48,11 @@ export default function App() {
    */
   const startJoiningCall = useCallback((url) => {
     const newCallObject = DailyIframe.createCallObject();
-    setRoomUrl(url);
+    const actualURL = 'http://localhost:3000/ongoingmeeting';
+    setRoomUrl(actualURL);
     setCallObject(newCallObject);
     setAppState(STATE_JOINING);
-    newCallObject.join({ url });
+    newCallObject.join({actualURL});
   }, []);
 
   /**
@@ -77,7 +79,7 @@ export default function App() {
    */
   useEffect(() => {
     const url = roomUrlFromPageUrl();
-    url && startJoiningCall(url);
+    url && startJoiningCall(`http://localhost:3000/ongoingmeeting`);
   }, [startJoiningCall]);
 
   /**
@@ -223,7 +225,7 @@ export default function App() {
         <StartButton
           disabled={!enableStartButton}
           onClick={() => {
-            createCall().then((url) => startJoiningCall(url));
+            createCall().then((actualURL) => startJoiningCall(actualURL));
           }}
         />
       )}

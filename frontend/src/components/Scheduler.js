@@ -45,27 +45,6 @@ function Scheduler() {
           />
         <br />
 
-        <label>Agenda:</label>
-          <textarea
-            name="agenda"
-            placeholder="Agenda:"
-            rows="6"
-            onChange={(event) => changeHandler(event)}
-          />
-        <br />
-
-        
-
-        <label>Context:</label>
-          {/* <DatePicker name="date" placeholder="Date" /> */}
-          <textarea 
-          name="context"
-          placeholder="Context:"
-          rows="6"
-          onChange={(event) => changeHandler(event)}
-          />
-        <br />
-
         <label>Start Time:</label>
           <input
             name="starttime"
@@ -102,13 +81,36 @@ function Scheduler() {
           <select name="meetingtype" onChange={(event) => changeHandler(event)}>
             <option value="decisionmaker">Decision Maker</option>
             <option value="relayinformation">Relay Information</option>
+            <option value="worktogether">Work Together</option>
             <option value="brainstorm">Brainstorm</option>
             <option value="feedback">Feedback</option>
             <option value="social">Social</option>
+            <option value="recurring">Recurring</option>
           </select>
         <br />
 
-        <label>Decisions/Questions:</label>
+        {/* <label>Agenda:</label>
+          <textarea
+            name="agenda"
+            placeholder="Agenda:"
+            rows="6"
+            onChange={(event) => changeHandler(event)}
+          />
+        <br /> */}
+
+        
+
+        <label>Context:</label>
+          {/* <DatePicker name="date" placeholder="Date" /> */}
+          <textarea 
+          name="context"
+          placeholder="Context:"
+          rows="6"
+          onChange={(event) => changeHandler(event)}
+          />
+        <br />
+
+        <label>Decisions/Questions/Points of discussion:</label>
           <textarea
             rows="6"
             name="decisionstomake"
