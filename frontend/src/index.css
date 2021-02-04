@@ -375,6 +375,11 @@ flex-direction: row;
   width: 70%;
 }
 
+.the-videobox{
+  height: 600px;
+  width: 600px;
+}
+
 .meeting-tracker-section{
   max-width: 20%;
   background-color: #333333;
